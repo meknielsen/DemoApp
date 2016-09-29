@@ -1,0 +1,4 @@
+extends ../node_modules/pug-bootstrap/_bootstrap
+block body
+	+btn-primary("Primary Button")
+
