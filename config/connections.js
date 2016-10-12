@@ -56,13 +56,13 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  piMongodbServer: {
+  MongodbServer: {
      adapter: 'sails-mongo',
      host: 'localhost',
      port: 27017,
   //   user: 'username', //optional
   //   password: 'password', //optional
-     database: 'sites' 
+     database: 'appointments'
   },
 
   /***************************************************************************
