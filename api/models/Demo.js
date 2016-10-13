@@ -9,14 +9,20 @@ module.exports = {
 
   attributes: {
 
+    customerName: {
+      type: 'string'
+    },
+    
     station: {
       type: 'string',
       required: true
     },
+    
     datetime: {
       type: 'datetime',
       required: true
     },
+    
     interest: {
       type: 'string'
     }

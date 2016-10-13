@@ -8,7 +8,24 @@
 module.exports = {
 
   attributes: {
-
+    
+    station: {
+      type: 'string',
+      required: true
+    },
+    
+    stationName: {
+      type: 'string',
+      required: true
+    },
+    
+    description: {
+      type: 'string'
+    },
+    
+    demonstrator: {
+      type: 'string'
+    }
+ 
   }
 };
-
