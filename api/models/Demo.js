@@ -18,12 +18,7 @@ module.exports = {
       required: true
     },
     
-    datetime: {
-      type: 'datetime',
-      required: true
-    },
-    
-    interest: {
+       interest: {
       type: 'string'
     }
 
