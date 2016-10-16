@@ -1,6 +1,14 @@
 extends start_layout
 block head
 
+ script.
+   $(function(){
+   $("#listDemos").load("/demo");
+   });
+   $(function(){
+     $("#newDemo").load("/demo/new");
+   });
+
 block content
  nav.navbar.navbar-default
   .container-fluid
@@ -11,15 +19,17 @@ block content
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='#') Appointments
+      a.navbar-brand(href='#') RSNA 2016
     // Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
         li.active
-          a(href='#')
-            | RSNA2016
+          a(href='#home' data-toggle="tab")
+            | Demos
             span.sr-only (current)
-
+        li
+          a(href='#newDemo' data-toggle="tab" role='tabpanel')
+            | New
 
       // code for the right side of the navbar
       ul.nav.navbar-nav.navbar-right
@@ -30,11 +40,9 @@ block content
             span.caret
           ul.dropdown-menu
             li
-              a(href='#') New Appointment
+              a(href='#newDemo' data-toggle="tab" role='tabpanel') New demo
             li
               a(href='#') List Stations
-            li
-              a(href='#') Something else here
             li.divider(role='separator')
             li
               a(href='#') Separated link
@@ -45,13 +53,15 @@ block content
   .row
     .col-md-12
 
-      h1 RSNA 2016 Appointments
-      p
-      a.btn.btn-primary.btn-lg(href='#', role='button') Learn much more
+    .tab-content
+      #home.tab-pane.active(role='tabpanel')
+        #listDemos
+      #newDemo.tab-pane(role='tabpanel')
+        #newDemo
 
       .row
         .col-md-4
-          // this column will hold the login form 
+          // this column will hold the login form
         .col-md-4
           // this column will hold a heading with a button
         .col-md-4

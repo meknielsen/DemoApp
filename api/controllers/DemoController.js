@@ -27,6 +27,10 @@ module.exports = {
 	            demo: demo
 	        });
 	    });
+	},
+	
+	demos: function(req, res) {
+	    console.log('vireker');
 	}
 };
 
