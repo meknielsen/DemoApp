@@ -14,13 +14,14 @@ module.exports = {
 	create: function(req, res, next) {
 	    Demo.create(req.params.all(), function demoCreated(err, demo) {
 	        if (err) return next(err);
-	        res.redirect('/demo/show/' + demo.id);
+	        res.redirect('/demo/shownew/' + demo.id);
 	    });
 	},
 	
-	show: function(req, res, next) {
+	shownew: function(req, res, next) {
 	    
 	    Demo.findOne(req.param('id'), function foundDemo(err, demo) {
+	        
 	        if (err) return next(err);
 	        if (!demo) return next();
 	        res.view({
@@ -29,8 +30,13 @@ module.exports = {
 	    });
 	},
 	
-	demos: function(req, res) {
-	    console.log('vireker');
+	listdemos: function(req, res, next) {
+		Demo.find(function foundDemos(err, demos) {
+			if (err) return next(err);
+			res.view({
+				demos: demos
+			})
+		});
 	}
 };
 

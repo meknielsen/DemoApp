@@ -1,0 +1,24 @@
+$('#listDemos').click(function (e) {
+    console.log("In #newDemoTab function ...");
+    e.preventDefault()
+    $(this).load("/demo/");
+    
+   });
+   
+   
+   
+   
+ 
+// jquery innerHTML
+  
+   function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+    console.log("in function");
+   }
+   
+// and in pug file
+
+button(onclick='myFunction()') Click me
+p#demo
+   
+   

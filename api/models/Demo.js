@@ -8,19 +8,60 @@
 module.exports = {
 
   attributes: {
-
-    customerName: {
+    
+    date: {
       type: 'string'
     },
-    
+    time: {
+      type: 'string'
+    }, 
+    duration: {
+      type: 'string'
+    }, 
+    stationtype: {
+      type: 'string'
+    }, 
     station: {
-      type: 'string',
-      required: true
-    },
-    
-       interest: {
+      type: 'string'
+    }, 
+    apptype: {
+      type: 'string'
+    }, 
+    onsiteagfacontact: {
+      type: 'string'
+    }, 
+    nopa: {
+      type: 'string'
+    }, 
+    appnotes: {
+      type: 'string'
+    }, 
+    appnotesint: {
+      type: 'string'
+    }, 
+    hospital: {
+      type: 'string'
+    }, 
+    customertype: {
+      type: 'string'
+    }, 
+    location: {
+      type: 'string'
+    }, 
+    country: {
+      type: 'string'
+    }, 
+    customerfirstname: {
+      type: 'string'
+    }, 
+    customerlastname: {
+      type: 'string'
+    }, 
+    email: {
+      type: 'string'
+    }, 
+    region: {
       type: 'string'
     }
-
   }
 };
