@@ -21,4 +21,16 @@ $('#listDemos').click(function (e) {
 button(onclick='myFunction()') Click me
 p#demo
    
-   
+.container
+  #accordion.panel-group
+    - var i = 0;
+    each demo, index in demos
+     - ++i;
+     .panel.panel-default
+      .panel-heading
+       h4.panel-title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse1')
+        = demo.station
+      #collapse1.panel-collapse.collapse.in
+       .panel-body
+         | test
