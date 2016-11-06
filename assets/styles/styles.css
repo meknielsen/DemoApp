@@ -63,3 +63,44 @@ p {
     margin-right: auto;
     margin-left: auto;
 }
+
+#Enterprise,
+#Enterprise>a {
+  background-color: #6095c1;
+  color: #f2f2f2;
+
+}
+
+#Departmental,
+#Departmental>a {
+  background-color: #f57311;
+  color: #f2f2f2;
+}
+
+#Service, 
+#Service>a {
+  background-color: #6095c1;
+  color: #f2f2f2;
+}
+
+#Image\ Quality, 
+#Image\ Quality>a {
+  background-color: #6095c1;
+  color: #f2f2f2;
+}
+
+#DR, 
+#DR>a {
+  background-color: #fe9c1e;
+  color: #f2f2f2;
+}
+
+#Meeting, 
+#Meeting>a {
+  background-color: #6095c1;
+  color: #f2f2f2;
+}
+
+.panel-title {
+  font-size: 14px;
+}

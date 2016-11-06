@@ -26,6 +26,7 @@ module.exports = {
 	    //	Call to /upload via GET is error
 	
 	    var uploadFile = req.file('uploadFile');
+	    var files;
 	    //console.log(uploadFile);
 	
 	    uploadFile.upload(function onUploadComplete(err, files) {
@@ -33,10 +34,32 @@ module.exports = {
 	
 	        if (err) return res.serverError(err);
 	        //	IF ERROR Return and send 500 error with error
-	
-	        //console.log(files);
+
+	        // console.log(files[0].fd);
 	        res.json({ status: 200, file: files });
+	        
+	        var fs = require('fs');
+			var readline = require('readline');
+			var filename = files[0].fd;
+			var array = [];
+			
+			readline.createInterface({
+			    input: fs.createReadStream(filename),
+			    terminal: false
+			}).on('line', function(line) {
+			    array = line.split(';');
+			    
+			    Station.create({type:array[0],stationName:array[1],stationProfile:array[2],typicalDemoDuration:array[3],demonstrator:array[4],suggestedDemoLength:array[5]}).exec(function (err, station){
+	        		if (err) { return res.serverError(err); }
+	        		return res.ok();
+	    		});
+
+			});
+	        
+	        
 	    });
+	    
+
+	    
 	}
 };
-

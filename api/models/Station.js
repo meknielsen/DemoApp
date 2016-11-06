@@ -32,7 +32,7 @@ module.exports = {
     },
     
     suggestedDemoLength: {
-      type: 'integer'
+      type: 'string'
     }
  
   }

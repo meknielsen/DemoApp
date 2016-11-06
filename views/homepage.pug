@@ -3,16 +3,14 @@ block head
 
  script.
    $(function(){
-   $("#listDemos").load("/demo/listdemos");
+     $("#listDemos").load("/demo/listdemos");
    });
    $(function(){
-   $("#newDemo").load("/demo/new");
+     $("#newDemo").load("/demo/new");
    });
    $(function(){
-   $("#listStations").load("/station/liststations");
+     $("#listStations").load("/station/liststations");
    });
-   
-   console.log("logging");
    
    $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
@@ -27,9 +25,6 @@ block head
     console.log("in function");
    }
 
-
-
-
 block content
  nav.navbar.navbar-default
   .container-fluid
@@ -40,7 +35,8 @@ block content
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='#') RSNA 2016
+      a.navbar-brand(href='#' data-toggle="tab") RSNA 2016
+
     // Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
@@ -54,7 +50,12 @@ block content
         li
           a#StationsTab(href='#listStations' data-toggle="tab")
             | Stations
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#')
+            span.glyphicon.glyphicon-align-left(aria-hidden='true')
 
+    
       
     // /.navbar-collapse
   // /.container-fluid

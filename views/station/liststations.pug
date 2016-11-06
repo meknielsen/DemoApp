@@ -4,9 +4,12 @@
     each station, index in stations
      - ++i;
      .panel.panel-default
-       .panel-heading
+       .panel-heading(id= station.type)
          h4.panel-title
          a(data-toggle='collapse', data-parent='#accordion', href=`#collapse${i}`) #{station.stationName}
+         .panel-title.pull-right #{station.suggestedDemoLength}
+         .clearfix
        .panel-collapse.collapse.in(id=`collapse${i}`)
          .panel-body
-           | test
+           b #{station.demonstrator}
+           p #{station.stationProfile}
