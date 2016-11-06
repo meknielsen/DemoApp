@@ -8,6 +8,9 @@ block head
    $(function(){
    $("#newDemo").load("/demo/new");
    });
+   $(function(){
+   $("#listStations").load("/station/liststations");
+   });
    
    console.log("logging");
    
@@ -48,6 +51,9 @@ block content
         li
           a#newDemoTab(href='#newDemo' data-toggle="tab")
             | New
+        li
+          a#StationsTab(href='#listStations' data-toggle="tab")
+            | Stations
 
       
     // /.navbar-collapse
@@ -62,7 +68,8 @@ block content
         #listDemos
       #newDemo.tab-pane(role='tabpanel')
         #newDemo 
-        
+      #listStations.tab-pane(role='tabpanel')
+        #listStations  
 
       .row
         .col-md-4

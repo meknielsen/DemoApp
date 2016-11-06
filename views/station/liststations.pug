@@ -1,12 +1,12 @@
 .container
   #accordion.panel-group
     - var i = 0;
-    each demo, index in demos
+    each station, index in stations
      - ++i;
      .panel.panel-default
        .panel-heading
          h4.panel-title
-         a(data-toggle='collapse', data-parent='#accordion', href=`#collapse${i}`) #{demo.hospital} #{demo.customerfirstname} #{demo.customerlastname}
+         a(data-toggle='collapse', data-parent='#accordion', href=`#collapse${i}`) #{station.stationName}
        .panel-collapse.collapse.in(id=`collapse${i}`)
          .panel-body
            | test

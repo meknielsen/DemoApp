@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
     
-    station: {
+    type: {
       type: 'string',
       required: true
     },
@@ -19,12 +19,20 @@ module.exports = {
       required: true
     },
     
-    description: {
+    stationProfile: {
+      type: 'string'
+    },
+    
+    typicalDemoDuration: {
       type: 'string'
     },
     
     demonstrator: {
       type: 'string'
+    },
+    
+    suggestedDemoLength: {
+      type: 'integer'
     }
  
   }
