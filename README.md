@@ -70,5 +70,5 @@ The basics is there, but if user authentication is enabled, this would have to b
 #### Bootstrap configuration
 
 Bootstrap files are included in the assets folder where Sails automatically includes the static files during lift. 
-Nothing should not be needed to do here. 
+Nothing should be needed to do here. 
 
