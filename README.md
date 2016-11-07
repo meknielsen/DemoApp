@@ -18,6 +18,9 @@ functionality with [Waterline](http://sailsjs.org/features#?database) ORM.
 This is a single page applicaton, SPA, based on bootstrap frontend and Sails.js backend REST API and datastore, supporting 
 a MVC one page web application. 
 
+The application will be depending on data population by CSV data upload of demo stations and scheduled demontrations. 
+As a reallife example, I have 
+
 ### Prerequisites
 
 A standard setup with Node.js is first needed. I use Node 4.5.0 currently, with NPM 2.15.9, in Cloud9 development 
