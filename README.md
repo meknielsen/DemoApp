@@ -16,7 +16,7 @@ functionality with [Waterline](http://sailsjs.org/features#?database) ORM.
 ## demoRSNA
 
 This is a single page applicaton, SPA, based on bootstrap frontend and Sails.js backend REST API and datastore, supporting 
-an MVC one page web application. 
+a MVC one page web application. 
 
 ### Prerequisites
 
@@ -29,3 +29,43 @@ After Node and NPM is setup, if not already, the following is needed:
 - A database, almost any would work. Check Sails.js for your preferred DB. I use MongoDB. Alternative is to use Sails.js 
 disk-storage (built in and default untill you change it).
 - [Pug.js](http://pugjs.org) - a template language for HTML (Sails.js comes with EJS, but I thought it could be fun to try Pug.js)
+- [Bootstrap](http://getbootstrap.com)
+
+
+### Installing MongoDB
+
+The steps for installing MongoDB depends on your platform. Check the guides on [MongoDB](https://docs.mongodb.com/) website.
+
+### Installing
+
+In package.json, the relevant prerequisites are included. This includes:
+
+- sails-mongo - the Sails Waterline adapter for MongoDB. 
+- pug - the template engine for HTML
+- bootstrap
+
+First pull the code from GitHub. Then simply run `npm install` which will install all the Sails dependencies, including the 
+project specific ones for this project. As mentioned, MongDB is assumed, so this README will describe how to get running with that. 
+
+
+#### Configuring your datastore
+
+Using a datastore different from the build-in Sails-disk, it is nescessary to check the config/connections.js. 
+
+````javascript
+     MongodbServer: {
+     adapter: 'sails-mongo',
+     host: 'localhost',
+     port: 27017,
+     //   user: 'username', //optional
+     //   password: 'password', //optional
+     database: 'RSNA2016'
+     },
+```
+The basics is there, but if user authentication is enabled, this would have to be configured. 
+
+#### Bootstrap configuration
+
+Bootstrap files are included in the assets folder where Sails automatically includes the static files during lift. 
+Nothing should not be needed to do here. 
+
