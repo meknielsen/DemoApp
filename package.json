@@ -23,7 +23,8 @@
     "sails": "~0.12.4",
     "sails-disk": "~0.10.9",
     "sails-mongo": "^0.12.1",
-    "pug": "2.0.0-beta6"
+    "pug": "2.0.0-beta6",
+    "bootstrap": " "
   },
   "scripts": {
     "debug": "node debug app.js",

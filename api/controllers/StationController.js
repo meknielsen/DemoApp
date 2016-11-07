@@ -24,7 +24,16 @@ module.exports = {
 	    if (req.method === 'GET')
 	        return res.json({ 'status': 'GET not allowed' });
 	    //	Call to /upload via GET is error
-	
+	    
+	    // First we clear the DB to make sure we don't have any dublicates
+	    Station.destroy({}).exec(function (err){
+	    	if (err) {
+	    		return res.negotiate(err);
+	    	};
+	    	console.log("Destroy");
+	    });
+	    
+	    // Then the upload function itself, including DB create loop
 	    var uploadFile = req.file('uploadFile');
 	    var files;
 	    //console.log(uploadFile);
