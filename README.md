@@ -16,8 +16,8 @@ functionality with [Waterline](http://sailsjs.org/features#?database) ORM.
 
 ## DemoApp
 
-This is a single page applicaton, SPA, based on bootstrap frontend and Sails.js backend REST API and datastore, supporting 
-a MVC one page web application. It supports creating demonstraion appointments at exhibitions and the like. For convenience 
+This is a single page applicaton, SPA, based on bootstrap frontend and Sails.js backend REST API and datastore, providing 
+a MVC one page web application. It supports creating demonstration appointments at exhibitions and the like. For convenience 
 it includes a file upload function, to easily import Demo Stations for the Vendor Booth, and appointments collected in CSV file 
 from a coorporate scheduling tool. The Demo and Station model in the MVC, naturally assumes a number of predefined fields, 
 suitable for this app. Feel free to alter to accomodate different syntax and data sources. 

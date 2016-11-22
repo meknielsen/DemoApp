@@ -2,28 +2,6 @@ extends start_layout
 block head
 
  script.
-   $(function(){
-     $("#listDemos").load("/demo/listdemos");
-   });
-   $(function(){
-     $("#newDemo").load("/demo/new");
-   });
-   $(function(){
-     $("#listStations").load("/station/liststations");
-   });
-   
-   $(document).on('click','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-        $(this).collapse('hide');
-    }
-   });
-
-   
-  
-   function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
-    console.log("in function");
-   }
 
 block content
  nav.navbar.navbar-default
@@ -50,28 +28,34 @@ block content
         li
           a#StationsTab(href='#listStations' data-toggle="tab")
             | Stations
-      ul.nav.navbar-nav.navbar-right
         li
-          a(href='#')
+          a#uploadStationsTab(href='#uploadStations' data-toggle="tab")
+            | Upload Stations
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
             span.glyphicon.glyphicon-cog(aria-hidden='true')
+          ul.dropdown-menu
+            a(href='#')
+            | Settings
 
     
       
-    // /.navbar-collapse
-  // /.container-fluid
+    // 
+  // 
 
  .container
   .row
     .col-md-12
-
     .tab-content
       #listDemos.tab-pane.active(role='tabpanel')
         #listDemos
       #newDemo.tab-pane(role='tabpanel')
         #newDemo 
       #listStations.tab-pane(role='tabpanel')
-        #listStations  
-
+        #listStations
+      #uploadStations.tab-pane(role='tabpanel')
+        #uploadStations
       .row
         .col-md-4
           // this column will hold the login form
