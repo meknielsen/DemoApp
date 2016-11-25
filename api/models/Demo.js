@@ -27,6 +27,9 @@ module.exports = {
     apptype: {
       type: 'string'
     }, 
+    appstatus: {
+      type: 'string'
+    },
     onsiteagfacontact: {
       type: 'string'
     }, 
@@ -39,6 +42,9 @@ module.exports = {
     appnotesint: {
       type: 'string'
     }, 
+    cancelreason: {
+      type: 'string'
+    },
     hospital: {
       type: 'string'
     }, 
@@ -60,6 +66,9 @@ module.exports = {
     email: {
       type: 'string'
     }, 
+    customernotes: {
+      type: 'string'
+    },
     region: {
       type: 'string'
     }

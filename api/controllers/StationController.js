@@ -58,7 +58,13 @@ module.exports = {
 			}).on('line', function(line) {
 			    array = line.split(';');
 			    
-			    Station.create({type:array[0],stationName:array[1],stationProfile:array[2],typicalDemoDuration:array[3],demonstrator:array[4],suggestedDemoLength:array[5]}).exec(function (err, station){
+			    Station.create({
+					type:array[0],
+					stationName:array[1],
+					stationProfile:array[2],
+					typicalDemoDuration:array[3],
+					demonstrator:array[4],
+					suggestedDemoLength:array[5]}).exec(function (err, station){
 	        		if (err) { return res.serverError(err); }
 	        		return res.ok();
 	    		});
